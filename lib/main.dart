@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
 
   MaterialColor themecolor = MaterialColor(
-    Color.fromARGB(252, 181, 226, 161).value,
-    <int, Color>{
+    const Color.fromARGB(252, 181, 226, 161).value,
+    const <int, Color>{
       50: Color.fromRGBO(181, 226, 161, 0.1),
       100: Color.fromRGBO(181, 226, 161, 0.2),
       200: Color.fromRGBO(181, 226, 161, 0.3),
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(),
         primarySwatch: themecolor,
       ),
-      home: RegisterScreen(),
+      home: const RegisterScreen(),
     );
   }
 }
