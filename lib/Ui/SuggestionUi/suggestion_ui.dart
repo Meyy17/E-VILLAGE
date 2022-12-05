@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SugestionScreen extends StatefulWidget {
-  SugestionScreen({Key? key}) : super(key: key);
+  const SugestionScreen({Key? key}) : super(key: key);
 
   @override
   State<SugestionScreen> createState() => _SugestionScreenState();
@@ -17,15 +17,16 @@ class _SugestionScreenState extends State<SugestionScreen> {
       floatingActionButton: InkWell(
         onTap: () {},
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: Color.fromARGB(255, 181, 226, 161),
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(30),
                   topRight: Radius.circular(30),
                   bottomLeft: Radius.circular(30),
                   bottomRight: Radius.circular(0))),
-          padding: EdgeInsets.only(top: 8, bottom: 8, left: 10, right: 10),
-          child: Text(
+          padding:
+              const EdgeInsets.only(top: 8, bottom: 8, left: 10, right: 10),
+          child: const Text(
             "Tambah Saran",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
@@ -38,7 +39,7 @@ class _SugestionScreenState extends State<SugestionScreen> {
         title: Text(
           "Saran",
           style: GoogleFonts.poppins(
-              color: Color.fromARGB(255, 181, 226, 161),
+              color: const Color.fromARGB(255, 181, 226, 161),
               fontWeight: FontWeight.w600),
         ),
       ),
@@ -46,8 +47,8 @@ class _SugestionScreenState extends State<SugestionScreen> {
         itemCount: 5,
         itemBuilder: (BuildContext context, int index) {
           return Container(
-            margin: EdgeInsets.only(top: 15, left: 20, right: 20),
-            padding: EdgeInsets.all(20),
+            margin: const EdgeInsets.only(top: 15, left: 20, right: 20),
+            padding: const EdgeInsets.all(20),
             width: 315,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
@@ -55,7 +56,7 @@ class _SugestionScreenState extends State<SugestionScreen> {
             child: Column(
               children: [
                 Container(
-                  margin: EdgeInsets.only(bottom: 10),
+                  margin: const EdgeInsets.only(bottom: 10),
                   child: Row(
                     children: [
                       Container(
@@ -66,15 +67,15 @@ class _SugestionScreenState extends State<SugestionScreen> {
                             color: Colors.grey),
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 10),
+                        margin: const EdgeInsets.only(left: 10),
                         width: 190,
-                        child: Text(
+                        child: const Text(
                           "Nama Pengguna",
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
                       Container(
-                        child: Text(
+                        child: const Text(
                           "Hari ini",
                           style: TextStyle(
                               fontSize: 8,
@@ -89,7 +90,7 @@ class _SugestionScreenState extends State<SugestionScreen> {
                   children: [
                     Container(
                       width: 200,
-                      child: Text(
+                      child: const Text(
                         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                         style: TextStyle(fontSize: 9),
                       ),
@@ -98,7 +99,7 @@ class _SugestionScreenState extends State<SugestionScreen> {
                 ),
                 img != ""
                     ? Container(
-                        margin: EdgeInsets.only(top: 20, bottom: 20),
+                        margin: const EdgeInsets.only(top: 20, bottom: 20),
                         height: 135,
                         width: 300,
                         decoration: BoxDecoration(
@@ -109,7 +110,7 @@ class _SugestionScreenState extends State<SugestionScreen> {
                 Row(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(top: 10),
+                      margin: const EdgeInsets.only(top: 10),
                       width: 235,
                       child: Row(
                         children: [
@@ -117,7 +118,7 @@ class _SugestionScreenState extends State<SugestionScreen> {
                             margin: EdgeInsets.only(right: 5),
                             child: InkWell(
                               onTap: () {},
-                              child: Icon(
+                              child: const Icon(
                                 Icons.favorite_outline,
                                 size: 18,
                                 color: Color.fromARGB(255, 181, 226, 161),
@@ -128,7 +129,7 @@ class _SugestionScreenState extends State<SugestionScreen> {
                             margin: EdgeInsets.only(right: 5),
                             child: InkWell(
                               onTap: () {},
-                              child: Icon(
+                              child: const Icon(
                                 Icons.share,
                                 size: 18,
                                 color: Color.fromARGB(255, 181, 226, 161),
@@ -137,8 +138,8 @@ class _SugestionScreenState extends State<SugestionScreen> {
                           ),
                           InkWell(
                             onTap: () {},
-                            child: Icon(
-                              Icons.share,
+                            child: const Icon(
+                              Icons.reply_all,
                               size: 18,
                               color: Color.fromARGB(255, 181, 226, 161),
                             ),
@@ -147,8 +148,8 @@ class _SugestionScreenState extends State<SugestionScreen> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 5),
-                      child: Text(
+                      margin: const EdgeInsets.only(left: 5),
+                      child: const Text(
                         "10:00",
                         style: TextStyle(
                             fontSize: 8,

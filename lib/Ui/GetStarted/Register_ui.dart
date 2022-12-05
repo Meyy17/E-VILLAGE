@@ -91,7 +91,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   filled: true,
                   fillColor: Color.fromARGB(40, 180, 226, 161),
                   prefixIcon: Icon(Icons.people),
-                  hintText: 'masukan nama lengkap')),
+                  hintText: 'masukkan nama lengkap')),
         ),
         Container(
           margin: EdgeInsets.only(top: 15),
@@ -110,7 +110,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   filled: true,
                   fillColor: Color.fromARGB(40, 180, 226, 161),
                   prefixIcon: Icon(Icons.email),
-                  hintText: 'masukan email anda')),
+                  hintText: 'masukkan email anda')),
         ),
         Container(
           margin: EdgeInsets.only(top: 15),

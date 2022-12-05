@@ -1,13 +1,13 @@
-import 'dart:ui';
+// ignore_for_file: file_names
 
 import 'package:e_villlage/Ui/HomeScreenUi/homescreen_ui.dart';
-import 'package:e_villlage/Ui/ProfileScreenUi/profileui.dart';
-import 'package:e_villlage/Ui/RiwayatUi/riwayatui.dart';
+import 'package:e_villlage/Ui/ProfileScreenUi/profile_ui.dart';
+import 'package:e_villlage/Ui/RiwayatUi/riwayat_ui.dart';
 import 'package:e_villlage/Ui/SuggestionUi/suggestion_ui.dart';
 import 'package:flutter/material.dart';
 
 class NavBotBar extends StatefulWidget {
-  NavBotBar({Key? key}) : super(key: key);
+  const NavBotBar({Key? key}) : super(key: key);
 
   @override
   State<NavBotBar> createState() => _NavBotBarState();
@@ -16,16 +16,16 @@ class NavBotBar extends StatefulWidget {
 class _NavBotBarState extends State<NavBotBar> {
   int _screenindex = 0;
   final screen = [
-    HomeScreen(),
-    Center(
+    const HomeScreen(),
+    const Center(
       child: Text(
         "PAGE KE",
         style: TextStyle(color: Colors.black),
       ),
     ),
-    SugestionScreen(),
-    RiwayatScreen(),
-    ProfileScreen()
+    const SugestionScreen(),
+    const RiwayatScreen(),
+    const ProfileScreen()
   ];
 
   @override
@@ -56,7 +56,7 @@ class _NavBotBarState extends State<NavBotBar> {
           ),
         ],
         currentIndex: _screenindex,
-        selectedItemColor: Color.fromARGB(255, 181, 226, 161),
+        selectedItemColor: const Color.fromARGB(255, 181, 226, 161),
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: true,
         onTap: (value) {

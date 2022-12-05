@@ -20,7 +20,7 @@ class _RiwayatScreenState extends State<RiwayatScreen> {
         title: Text(
           "Riwayat",
           style: GoogleFonts.poppins(
-              color: Color.fromARGB(255, 181, 226, 161),
+              color: const Color.fromARGB(255, 181, 226, 161),
               fontWeight: FontWeight.w600),
         ),
       ),
@@ -29,7 +29,7 @@ class _RiwayatScreenState extends State<RiwayatScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset("Asset/Image/pana.png"),
-            Text(
+            const Text(
               "Belum ada riwayat pembayaran!",
               style: TextStyle(color: Colors.grey),
             )

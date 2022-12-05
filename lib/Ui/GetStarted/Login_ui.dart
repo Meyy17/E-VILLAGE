@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   filled: true,
                   fillColor: Color.fromARGB(40, 180, 226, 161),
                   prefixIcon: Icon(Icons.email),
-                  hintText: 'masukan email anda')),
+                  hintText: 'masukkan email anda')),
         ),
         Container(
           margin: EdgeInsets.only(top: 15),
@@ -131,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   filled: true,
                   fillColor: Color.fromARGB(40, 180, 226, 161),
                   prefixIcon: Icon(Icons.lock),
-                  hintText: 'masukan password')),
+                  hintText: 'masukkan password')),
         ),
       ],
     );

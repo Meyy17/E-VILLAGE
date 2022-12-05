@@ -1,3 +1,4 @@
+import 'package:e_villlage/Ui/GetStarted/Login_ui.dart';
 import 'package:e_villlage/Ui/NotificationUi/notification_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,15 +19,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
           Stack(
             children: [
               Container(
-                height: 215,
-                decoration: BoxDecoration(
+                height: 185,
+                decoration: const BoxDecoration(
                     color: Color.fromARGB(255, 181, 226, 161),
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(30),
                         bottomRight: Radius.circular(30))),
               ),
               Container(
-                margin: EdgeInsets.only(top: 70),
+                margin: const EdgeInsets.only(top: 30),
                 child: Column(
                   children: [
                     Row(
@@ -45,8 +46,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(100),
                             color: Colors.white),
-                        padding: EdgeInsets.all(5),
-                        margin: EdgeInsets.only(top: 50),
+                        padding: const EdgeInsets.all(5),
+                        margin: const EdgeInsets.only(top: 50),
                         child: Container(
                           width: 150,
                           height: 150,
@@ -55,14 +56,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               color: Colors.grey),
                         )),
                     Container(
-                      margin: EdgeInsets.only(top: 10),
-                      child: Text(
+                      margin: const EdgeInsets.only(top: 10),
+                      child: const Text(
                         "Nama Pengguna",
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
                     Container(
-                      child: Text(
+                      child: const Text(
                         "Nama Lengkap Pengguna",
                         style: TextStyle(color: Colors.grey),
                       ),
@@ -71,7 +72,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       margin: EdgeInsets.only(left: 20, top: 20),
                       child: Column(
                         children: [
-                          ListTile(
+                          const ListTile(
                             leading: Icon(
                               Icons.people,
                               color: Color.fromARGB(255, 181, 226, 161),
@@ -82,7 +83,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   color: Color.fromARGB(255, 181, 226, 161)),
                             ),
                           ),
-                          ListTile(
+                          const ListTile(
                             leading: Icon(
                               Icons.settings,
                               color: Color.fromARGB(255, 181, 226, 161),
@@ -93,7 +94,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   color: Color.fromARGB(255, 181, 226, 161)),
                             ),
                           ),
-                          ListTile(
+                          const ListTile(
                             leading: Icon(
                               Icons.help,
                               color: Color.fromARGB(255, 181, 226, 161),
@@ -105,11 +106,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                           ),
                           ListTile(
-                            leading: Icon(
+                            onTap: () {
+                              Navigator.pushAndRemoveUntil(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => LoginScreen(),
+                                  ),
+                                  (route) => false);
+                            },
+                            leading: const Icon(
                               Icons.logout,
                               color: Colors.red,
                             ),
-                            title: Text(
+                            title: const Text(
                               "Logout",
                               style: TextStyle(color: Colors.red),
                             ),
@@ -123,16 +132,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Positioned(
                 right: 0,
                 child: Container(
-                  margin: EdgeInsets.only(top: 50, right: 20),
+                  margin: const EdgeInsets.only(top: 30, right: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                          padding: EdgeInsets.all(5),
+                          padding: const EdgeInsets.all(5),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(100),
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 color: Color.fromARGB(18, 0, 0, 0),
                                 spreadRadius: 2,
@@ -148,11 +157,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          NotificationScreen(),
+                                          const NotificationScreen(),
                                     ));
                               },
-                              child:
-                                  Container(child: Icon(Icons.notifications))))
+                              child: Container(
+                                  child: const Icon(
+                                Icons.notifications,
+                                size: 30,
+                              ))))
                     ],
                   ),
                 ),
